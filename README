@@ -1,0 +1,28 @@
+This project is about epigenetics of asthma remission
+
+** Definitions of asthma remission **
+1. clinical remission: 
+  1) No use of any asthma medication, 
+  2) no symptoms (asthma attacks and wheeze) in the past year or in the past three years (the questionnaire differed on this between the different cohorts included)
+2. complete remission: 
+  1) No use of any asthma medication, 
+  2) no symptoms (asthma attacks and wheeze) in the past year or in the past three years, 
+  3) no BHR (either histamine or methacholine bronchoprovocation test), 
+  4) FEV1% predicted pre bronchodilator > 80% OR FEV1%predicted post bronchodilator > 90%
+  
+** Data **
+1. DNA methylation: both blood and nasal brushes
+2. phenotype: age, gender, remission (0 = asthma,1 = clinical remission only ("clinical remission without complete remission"), 2 = complete remission )
+  smoking, ICS, batch, lung function measurement (FEV1, FVC, FEV1pred, FVCpred), age onset asthma, BHR (?)
+  longitudinal data: baseline and last visit
+3. RNAseq: only nasal brushes
+4. other data: genotype (?)
+
+** Analysis **
+1. EWAS of asthma remission (complete remission and all remission) in blood;
+2. Replication of all remission (in LifeLines); complete remission (in EGEA); meta-analysis of discovery and replication (?);
+3. EWAS of asthma remission (complete remission and all remission) in nasal brushes;
+4. Comparison of results in nasal and blood (?)
+5. eQTM of nasal data
+6. ???
+
