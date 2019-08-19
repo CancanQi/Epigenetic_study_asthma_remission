@@ -1,0 +1,21 @@
+## the results of whole blood were repliated in two cohorts, EGEA and Lifelines
+
+#1# ### replication in EGEA ###
+
+# send out: 129 CpGs of complete remission; 7 CpGs of all remission
+# model:  glmer( cbind(Meth, Unmeth) ~ MainVar + (1|nofamil) + age + sex + smoking + eosino + neutro + baso + mono + lympho)
+# pheno: for 3 phenotype: clinical remission (all remission), complete remission, clinical remission only
+# summary the esults of complete remission:
+
+setwd("~/Documents/Projects/Asthma remission/Replication/EGEA/15_Dec_EGEA")
+comrep<-read.csv2("./results/complete_remission_15Dec.csv",stringsAsFactors = F)
+comrep<-comrep[,c("X","Estimate_MainVar","SE_MainVar","Stat_MainVar","Pval_WDT")]
+
+comrep$Pval_WDT<-as.numeric(comrep$Pval_WDT)
+comrep$Estimate_MainVar<-as.numeric(comrep$Estimate_MainVar)
+comrep$SE_MainVar<-as.numeric(comrep$SE_MainVar)
+comrep$Stat_MainVar<-as.numeric(comrep$Stat_MainVar)
+
+comsig<-read.table("~/Documents/Projects/Asthma remission/DMA_results/blood/blood_ComRem_genomewide_sig.txt",header = T)
+
+
