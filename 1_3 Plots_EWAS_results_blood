@@ -1,1 +1,3 @@
 ## including manhattan plot and boxplot for the main results
+
+setwd("~/Documents/Projects/Asthma remission/DMA_results/")
