@@ -1,3 +1,14 @@
 ## including manhattan plot and boxplot for the main results
 
 setwd("~/Documents/Projects/Asthma remission/DMA_results/")
+load("blood/asthma_model2_bloed_complete_remission.txt.Rdata")
+
+anno<-read.csv("~/Documents/Projects/PIAMA/HumanMethylation450.csv",stringsAsFactors = F)
+all.anno<-anno[match(rownames(p.all),anno$IlmnID),]
+
+man<-data.frame(SNP=as.character(all.anno$IlmnID),CHR=as.numeric(all.anno$CHR),BP=all.anno$MAPINFO,P=p.all$pvalue)
+bonfer<--log10(0.05/dim(man)[1])
+
+
+
+
